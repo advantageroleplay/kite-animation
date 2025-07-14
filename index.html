@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Kite</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Kite Scene</title>
   <style>
     body {
       margin: 0;
@@ -14,24 +14,26 @@
       position: relative;
       width: 100vw;
       height: 100vh;
+      background: url('ChatGPT Image Jul 13, 2025 at 09_44_01 PM.png') no-repeat center center;
+      background-size: cover;
     }
     .kite {
       position: absolute;
-      top: 100px;
-      left: 50%;
+      top: 110px;
+      left: 190px;
       width: 200px;
-      transform: translateX(-50%) rotate(0deg);
+      transform-origin: center;
       animation: sway 4s ease-in-out infinite;
     }
     @keyframes sway {
-      0%, 100% { transform: translateX(-50%) rotate(0deg); }
-      50% { transform: translateX(-50%) rotate(4deg); }
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(4deg); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="kite" src="A_2D_digital_illustration_showcases_a_kite_glowing.png" alt="Kite Illustration">
+    <img class="kite" src="A_2D_digital_illustration_showcases_a_kite_glowing.png" alt="Kite" />
   </div>
 </body>
 </html>
