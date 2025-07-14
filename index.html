@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animated Kite Scene</title>
+  <title>Animated Kite</title>
   <style>
     body {
       margin: 0;
@@ -14,20 +14,19 @@
       position: relative;
       width: 100vw;
       height: 100vh;
-      background: url('forest-bg.png') no-repeat center center;
-      background-size: cover;
     }
     .kite {
       position: absolute;
       top: 110px;
-      left: 190px;
+      left: 50%;
       width: 200px;
+      transform: translateX(-50%);
       transform-origin: center;
       animation: sway 4s ease-in-out infinite;
     }
     @keyframes sway {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(4deg); }
+      0%, 100% { transform: translateX(-50%) rotate(0deg); }
+      50% { transform: translateX(-50%) rotate(4deg); }
     }
   </style>
 </head>
