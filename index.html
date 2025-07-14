@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Kite</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f4c4;
+      overflow: hidden;
+    }
+    .tree {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100vh;
+      width: 100vw;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+    }
+    .kite {
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #ff7b00 50%, #58c4dd 50%),
+                  linear-gradient(-45deg, #ffe933 50%, #8fc744 50%);
+      background-size: 100% 50%;
+      background-repeat: no-repeat;
+      transform: translateX(-50%) rotate(45deg);
+      animation: sway 3s ease-in-out infinite;
+      z-index: 2;
+    }
+    .tail {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      width: 4px;
+      height: 80px;
+      background: #d47100;
+      transform: translateX(-50%);
+      animation: tailwave 3s ease-in-out infinite;
+    }
+    @keyframes sway {
+      0%, 100% { transform: translateX(-50%) rotate(45deg) translateY(0); }
+      50% { transform: translateX(-50%) rotate(50deg) translateY(5px); }
+    }
+    @keyframes tailwave {
+      0%, 100% { transform: translateX(-50%) rotate(0deg); }
+      50% { transform: translateX(-50%) rotate(5deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="tree">
+    <div class="kite"></div>
+    <div class="tail"></div>
+  </div>
+</body>
+</html>
